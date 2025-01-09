@@ -26,7 +26,7 @@ This Docker setup includes:
 - Docker and Docker Compose installed
 - Python 3.11 or higher
 - At least 4GB of available RAM
-- 2GB of free disk space
+- 4GB of free disk space
 
 
 ## Getting Started
