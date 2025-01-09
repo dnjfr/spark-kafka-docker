@@ -1,6 +1,8 @@
 # Spark 3.5.4 and Kafka 3.9.0 Docker Environment
 
-This repository provides a ready-to-use Docker environment combining Apache Spark and Kafka clusters for data streaming and processing applications. Perfect for development, testing, and learning distributed data processing architectures.
+This repository provides a ready-to-use Docker environment combining Apache Spark and Kafka clusters for data streaming and processing applications. 
+
+Perfect for development, testing, and learning distributed data processing architectures.
 
 ## Overview
 
@@ -29,20 +31,20 @@ This Docker setup includes:
 
 ## Getting Started
 
-### 1. Clone the Repository
+### 1. Clone the repository
 ```bash
 git clone https://github.com/dnjfr/spark-kafka-docker
 cd spark-kafka-docker
 ```
 
-### 2. Set Up Python Environment
+### 2. Setup python environment
 ```bash
 python -m venv .venv 
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 3. Launch the Clusters
+### 3. Launch the clusters
 
 Start Spark master:
 ```bash
@@ -80,9 +82,9 @@ docker compose up -d
    - Port: `9092`
 4. Repeat for Broker 2 with appropriate values
 
-## Usage Examples
+## Usage examples
 
-### Running Spark Applications
+### Running Spark applications
 
 Execute the sample script:
 ```bash
@@ -94,7 +96,7 @@ Or submit a Spark job:
 docker exec -it spark-master spark-submit --master spark://spark-master:7077 /opt/spark/scripts/sample.py
 ```
 
-### Managing Kafka Topics
+### Managing Kafka topics
 
 Create a topic via CLI:
 ```bash
@@ -108,9 +110,9 @@ docker exec -it kafka-broker-1 opt/bitnami/kafka/bin/kafka-topics.sh \
 
 Alternatively, use Kafbat UI to create and manage topics.
 
-### Working with Kafka Messages
+### Working with Kafka messages
 
-#### Produce Messages (without key)
+#### Produce messages (without key)
 ```bash
 docker exec -it kafka-broker-1 opt/bitnami/kafka/bin/kafka-console-producer.sh \
     --bootstrap-server localhost:9092 \
@@ -122,7 +124,7 @@ Hello World
 This is a test message
 ```
 
-#### Produce Messages (with key)
+#### Produce messages (with key)
 ```bash
 docker exec -it kafka-broker-1 opt/bitnami/kafka/bin/kafka-console-producer.sh \
     --bootstrap-server localhost:9092 \
@@ -136,7 +138,8 @@ Example input:
 2;Second message
 ```
 
-#### Consume Messages
+#### Consume messages
+(open another terminal)
 ```bash
 docker exec -it kafka-broker-1 opt/bitnami/kafka/bin/kafka-console-consumer.sh \
     --bootstrap-server localhost:9092 \
@@ -155,7 +158,7 @@ docker exec -it kafka-broker-1 opt/bitnami/kafka/bin/kafka-console-consumer.sh \
 2. **Kafka Broker Communication Issues**
    - Verify cluster.id in workaround.sh
    - Check network settings in docker-compose files
-   - Inspect broker logs: `docker logs kafka-broker-1`
+   - Inspect broker logs: `docker logs kafka-broker-1` and `docker logs kafka-broker-2`
 
 ### Health Checks
 
@@ -178,7 +181,7 @@ spark.driver.memory=2g
 
 ### Scaling Workers
 
-To add more Spark workers, update the `docker-compose.yml` by uncommenting workers
+To add more Spark workers, update the `docker-compose.yml` by uncommenting Spark-workers
 
 
 ## License
