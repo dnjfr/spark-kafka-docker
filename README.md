@@ -7,7 +7,7 @@ This repository provides a ready-to-use Docker environment combining Apache Spar
 This Docker setup includes:
 - Apache Spark cluster (version 3.5.4) with:
 
-  - Spark Master
+  - Spark Master 
 
   - Spark History Server
 
