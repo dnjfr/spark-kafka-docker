@@ -188,12 +188,11 @@ To add more Spark workers, update the `docker-compose.yml` by uncommenting Spark
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## References
 
 Inspired by the work of:
-- karlchris
-- codersee-blog
-- MaximeGillot
+- [karlchris](https://karlchris.github.io/data-engineering/projects/spark-docker/)
+- [codersee-blog](https://codersee.com/how-to-set-up-kafka-without-zookeeper-using-docker-compose/)
 
 ## Contributing
 
