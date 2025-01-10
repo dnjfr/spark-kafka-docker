@@ -72,7 +72,7 @@ Launch remaining services:
 docker compose up -d
 ```
 
-### 4. Configure Kafbat UI
+### 4. Configure Kafbat UI (optionnal)
 
 1. Access Kafbat UI at `http://localhost:8080`
 2. Click "Configure new cluster"
